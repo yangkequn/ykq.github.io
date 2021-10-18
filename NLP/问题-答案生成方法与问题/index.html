@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1.note on arXiv:1903.11207 [cs.CV] #  图像生成问题和答案中的一些概念
+1.问题以及答案,是通用的问题还是和图像关联很强的问题。
+2.问题生成的几种方式。
+ 根据图片。然后生成问题以及生成答案. 根据图片和一个答案，再生成问题。 根据图片、类别以及答案，生成问题。  2.note on arXiv:2004.11892 [cs.CL] #  根据根据上下文，和答案来生成问题。首先从上下文中取出最接近上下文的一句话。然后根据这一句话来生成对应的问题。
+https://zhuanlan.zhihu.com/p/150665394
+一文了解｜Question Generation （QG）问题生成">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="问题 答案生成，方法与问题" />
+<meta property="og:description" content="1.note on arXiv:1903.11207 [cs.CV] #  图像生成问题和答案中的一些概念
+1.问题以及答案,是通用的问题还是和图像关联很强的问题。
+2.问题生成的几种方式。
+ 根据图片。然后生成问题以及生成答案. 根据图片和一个答案，再生成问题。 根据图片、类别以及答案，生成问题。  2.note on arXiv:2004.11892 [cs.CL] #  根据根据上下文，和答案来生成问题。首先从上下文中取出最接近上下文的一句话。然后根据这一句话来生成对应的问题。
+https://zhuanlan.zhihu.com/p/150665394
+一文了解｜Question Generation （QG）问题生成" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kequnyang.com/NLP/%E9%97%AE%E9%A2%98-%E7%AD%94%E6%A1%88%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95%E4%B8%8E%E9%97%AE%E9%A2%98/" /><meta property="article:section" content="NLP" />
+<meta property="article:published_time" content="2021-03-03T11:41:36+08:00" />
+<meta property="article:modified_time" content="2021-03-03T11:41:36+08:00" />
+
+<title>问题 答案生成，方法与问题 | To Build, I Live</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.95d69eb6bad8b9707ff2b5d8d9e31ce70a1b84f2ed7ffaf665ffcf00aa7993bd.css" integrity="sha256-ldaetrrYuXB/8rXY2eMc5wobhPLtf/r2Zf/PAKp5k70=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.373536f34199eb56bddef6ca099843c2918af0f8e0b49556900a01f4e91a655e.js" integrity="sha256-NzU280GZ61a93vbKCZhDwpGK8PjgtJVWkAoB9OkaZV4=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+    <h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>To Build, I Live</span>
+  </a>
+</h2>
+
+    
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    
+
+    
+
+  
+<ul>
+  
+  <li>
+    <a href="/idea" target="_blank" rel="noopener">
+        ideas
+      </a>
+  </li>
+  
+  <li>
+    <a href="/learning_website" target="_blank" rel="noopener">
+        learning website
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+    
+</nav>
+
+
+
+
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>问题 答案生成，方法与问题</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1note-on-arxiv190311207httpsarxivorgabs190311207-cscv">1.note on <a href="https://arxiv.org/abs/1903.11207">arXiv:1903.11207</a> <strong>[cs.CV]</strong></a></li>
+            <li><a href="#2note-on--arxiv200411892httpsarxivorgabs200411892-cscl">2.note on <a href="https://arxiv.org/abs/2004.11892"> arXiv:2004.11892</a> [cs.CL]</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown">1.note on <h3 id="1note-on-arxiv190311207httpsarxivorgabs190311207-cscv">
+  <a href="https://arxiv.org/abs/1903.11207">arXiv:1903.11207</a> <strong>[cs.CV]</strong>
+  <a class="anchor" href="#1note-on-arxiv190311207httpsarxivorgabs190311207-cscv">#</a>
+</h3>
+<p>图像生成问题和答案中的一些概念</p>
+<p>1.问题以及答案,是通用的问题还是和图像关联很强的问题。</p>
+<p>2.问题生成的几种方式。</p>
+<ol>
+<li>根据图片。然后生成问题以及生成答案.</li>
+<li>根据图片和一个答案，再生成问题。</li>
+<li>根据图片、类别以及答案，生成问题。</li>
+</ol>
+2.note on <h3 id="2note-on--arxiv200411892httpsarxivorgabs200411892-cscl">
+  <a href="https://arxiv.org/abs/2004.11892"> arXiv:2004.11892</a> [cs.CL]
+  <a class="anchor" href="#2note-on--arxiv200411892httpsarxivorgabs200411892-cscl">#</a>
+</h3>
+<p>根据根据上下文，和答案来生成问题。首先从上下文中取出最接近上下文的一句话。然后根据这一句话来生成对应的问题。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/150665394">https://zhuanlan.zhihu.com/p/150665394</a></p>
+<p>一文了解｜Question Generation （QG）问题生成</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/NLP/%e9%97%ae%e9%a2%98-%e7%ad%94%e6%a1%88%e7%94%9f%e6%88%90%ef%bc%8c%e6%96%b9%e6%b3%95%e4%b8%8e%e9%97%ae%e9%a2%98.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1note-on-arxiv190311207httpsarxivorgabs190311207-cscv">1.note on <a href="https://arxiv.org/abs/1903.11207">arXiv:1903.11207</a> <strong>[cs.CV]</strong></a></li>
+            <li><a href="#2note-on--arxiv200411892httpsarxivorgabs200411892-cscl">2.note on <a href="https://arxiv.org/abs/2004.11892"> arXiv:2004.11892</a> [cs.CL]</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
