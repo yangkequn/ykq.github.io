@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Okrs on To Build, I Live</title><link>https://kequnyang.com/okr/</link><description>Recent content in Okrs on To Build, I Live</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Sun, 03 Oct 2021 17:58:16 +0800</lastBuildDate><atom:link href="https://kequnyang.com/okr/index.xml" rel="self" type="application/rss+xml"/><item><title>OKR october 2021</title><link>https://kequnyang.com/okr/2021-10/</link><pubDate>Sun, 03 Oct 2021 17:58:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-10/</guid><description>Object 1. 10月20日是Demo day 2. 为网站找到试用用户</description></item><item><title>OKR September 2021</title><link>https://kequnyang.com/okr/2021-09/</link><pubDate>Wed, 01 Sep 2021 16:09:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-09/</guid><description>Object： # 放弃：搞定交互式推荐系统 测试平台对主动学习的评估 KeyResult
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Okrs on To Build, I Live</title><link>https://kequnyang.com/okr/</link><description>Recent content in Okrs on To Build, I Live</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Fri, 24 Jun 2022 11:02:45 +0800</lastBuildDate><atom:link href="https://kequnyang.com/okr/index.xml" rel="self" type="application/rss+xml"/><item><title>Iam26</title><link>https://kequnyang.com/okr/2022-06-iam26-model/</link><pubDate>Fri, 24 Jun 2022 11:02:45 +0800</pubDate><guid>https://kequnyang.com/okr/2022-06-iam26-model/</guid><description>6月月主要在学习强化学习。 # 书学了两本。算是入门，研究各种最新SOTA技术。强化学习框架 最后打算用actor-critic框架来做。 actor critic 模型
+flowchart LR enviroment --&amp;gt; observation observation --&amp;gt; Hearbeat --HearbeatVAE --&amp;gt;HBZ observation --&amp;gt; Audio HBZ --&amp;gt; MDN-RNN(Dynamic,NextState) --&amp;gt; critic Audio --AudioVAE --&amp;gt; AZ --&amp;gt; MDN-RNN HBZ--&amp;gt;critic AZ--&amp;gt;critic enviroment --reward--&amp;gt; critic 世界模型 https://zhuanlan.zhihu.com/p/42537455 # https://blog.csdn.net/KuXiaoQuShiHuai/article/details/109657951 看vae # https://worldmodels.github.io/ # https://zhuanlan.zhihu.com/p/384420701 DreamerV2实现代码 # https://zhuanlan.zhihu.com/p/363774920 DreamerV2 讲得很详细 # https://zhuanlan.zhihu.com/p/34998569 VAE的实现原理 https://github.com/bojone/vae/blob/master/cvae_keras.py # 其中提到Action 作用于隐态，得下一个状态，应该是一个独立函数，隐态之间遵守 min KL
+flowchart LR enviroment --&amp;gt; observation observation --&amp;gt; Hearbeat --HearbeatVAE --&amp;gt;HBZ --&amp;gt; MDN-RNN(Dynamic,NextState) --&amp;gt; controller controller --&amp;gt; ActionZ --&amp;gt; MDN-RNN HBZ--&amp;gt;controller ActionZ --&amp;gt; enviroment flowchart LR enviroment --&amp;gt; observation observation --&amp;gt; Hearbeat --HearbeatVAE --&amp;gt;HBZ --&amp;gt; MDN-RNN(Dynamic,NextState) --&amp;gt; controller controller --&amp;gt; ActionZ --&amp;gt; MDN-RNN controller --&amp;gt; Reward controller --&amp;gt; Value HBZ--&amp;gt;controller ActionZ --&amp;gt; enviroment 回报如何引入。如果改进模型 Dreamer v2 是否是同一个东西，如何改进</description></item><item><title>Iam26</title><link>https://kequnyang.com/okr/2022-07-iam26/</link><pubDate>Fri, 24 Jun 2022 11:02:45 +0800</pubDate><guid>https://kequnyang.com/okr/2022-07-iam26/</guid><description> 实现强化学习的模型 # gantt title 实现强化睡眠 dateFormat YYYY-MM-DD section 预备数据 写声音和心率数据采样软件 :done,crit,SampleAudioHearBeat, 2022-06-25 , 1d 调试数据采样软件 :done,crit,PrepareaudioData,after SampleAudioHearBeat, 2d 声音数据采样 :done,10d 预备各种声音数据集 :done,10d # 大量的自然心跳变化数据 :fail,10d 自动蓝牙重连，继续链接设备采集心率 :done,2d section 搭建强化学习环境 搭建强化学习环境 :done,crit,createRLEnviroment,2022-06-29 , 3d section 预备强化睡眠软件 heartbeatVAE:done,2022-07-13, 1d Wav2vec2.0,调试可用 :done,2022-07-14, 4d 拆分声音成为特征，并入库:done,2022-07-19, 2d 理解dreamer v2论文，极其实现 :done,2022-07-20, 5d 准备声音碎片，提取特征 :done,2022-07-24, 5d 通过声音碎片作为动作，采集心率轨迹:done,2022-07-28, 2d section 调试强化睡眠软件 训练world-mode:active,2022-07-30, 1d 训练action-critic:2022-07-30, 1d 调试强化睡眠 :done,crit, 2022-08-01 , 6d section 部署强化睡眠软件 部署强化睡眠软件 :crit, 2022-08-07 ,3d section 学习强化学习 学习stableBaselines3 :done,learnStableBaselin3, 2022-06-24 ,1d 学习sac :done, 2022-06-25 ,2h gantt title 优化强化睡眠软件 dateFormat YYYY-MM-DD section 部署强化睡眠软件 部署强化睡眠软件 :crit, 2022-08-07 ,2d</description></item><item><title>OKR of 22 04</title><link>https://kequnyang.com/okr/2022-04okr/</link><pubDate>Fri, 08 Apr 2022 15:16:19 +0800</pubDate><guid>https://kequnyang.com/okr/2022-04okr/</guid><description>2022-04-25 第四周 # 继续完成从手机识别心跳
+从生成训练数据倒推，关键还是
+1. 要有一个标注系统 1. 有一个预测系统，可以一边学习，一边预测，预测结构可以给标注系统进行使用 我觉得最好的办法还是获得数据以便可以训练神经网络
+数据必须是高质量的数据作为标注数据，所以安卓apk的使用不可避免
+2022-04-26 20:42:55
+2022-04-18 第三周 # 目标：iam26,实现强化睡眠的目标，以及心流强化，用于学习状态保证
+用手机的加速传感器实现安卓用户心率检测 ❎取消
+把加速度传感器数值上传到后台,每5秒插入一记录
+✅ 2022-04-23 12:42:35
+从传感器数据分析出心率数据
+2022-04-11 第二周 # 目标：实现强化睡眠的目标，以及心流强化，用于学习状态保证
+可以支持添加设备 支持聚焦目标 支持action list 支持action 反馈 Bug: 添加的目标，引用为2
+2022-04-04，第一周 # 目标：iam26, 用于生理年龄管理
+使用编辑器slate
+slate接口提取html 2022-04-08 ✅ 使用html 2022-04-08 ✅ 做成可调用component 2022-04-09 09:11:12 ✅ 做好 Act页面 ✅ 2022-04-10 20:18:35
+做好目标页面 ✅ 2022年04月10日20:44:51
+可以采用目标
+可以采用Act
+可以采用measure
+支持换行 ✅ 2022年04月19日
+短信验证登录
+学习完如何微调hugging face 模型</description></item><item><title>OKR_November_2021</title><link>https://kequnyang.com/okr/2021-11/</link><pubDate>Mon, 01 Nov 2021 08:36:08 +0800</pubDate><guid>https://kequnyang.com/okr/2021-11/</guid><description>Object:
+一个可以完整使用的，体验良好的学习平台
+Key Result:
+1.可以添加学习内容
+​ a. 添加课程
+​ done: 2021-11-03 13:28:42
+​ b. 删除课程
+​ done:2021-11-03 22:35:24
+​ c.上传document
+​ done:2021-11-04 10:04:12
+2.可以评估学习内容
+​ a. 使用redis 作为python 和golang传输信息的中间接口 2021-11-07
+​ 核心学会了使用intellij添加python编译器，command+;
+​ I)golang 发布消息，并由python接收api请求
+​ II)python 处理请求，并发布给golang 结果订阅
+​ b. python 把知识库的内容转为知识聚类
+​ 2021-11-09完成
+​ c. 可以查询和知识聚类的相似度，覆盖度
+​ 2021-11-09完成
+3.可以推荐学习内容
+​ 大约2021-11-30完成
+解决登录或注册困难
+3.可以谷歌登录
+4.可以微信登录</description></item><item><title>OKR october 2021</title><link>https://kequnyang.com/okr/2021-10/</link><pubDate>Sun, 03 Oct 2021 17:58:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-10/</guid><description>Object 1. 10月20日是Demo day 2. 为网站找到试用用户</description></item><item><title>OKR September 2021</title><link>https://kequnyang.com/okr/2021-09/</link><pubDate>Wed, 01 Sep 2021 16:09:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-09/</guid><description>Object： # 放弃：搞定交互式推荐系统 测试平台对主动学习的评估 KeyResult
 提交客户端记录 选型 初步查询引擎使用milvus text2vec模型选用 word_vector 加权平均值 但是这个方法显然无法考虑词语的先后顺序等问题。对语义内容的理解是有问题的 ELECTRA 打算后续用这个模型来改进 训练 部署 9月份大概只花了7天就完成了这个任务，剩下的时间在摸索React 和 go的后端</description></item><item><title>OKR August 2021</title><link>https://kequnyang.com/okr/2021-08/</link><pubDate>Tue, 03 Aug 2021 17:42:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-08/</guid><description>Object： 开发面向企业招聘评估市场的解决方案。 画出模拟业务流程图的反馈图
 Key Result: 为企业招聘市场开发评估工具和模板，以及对模板的处理框架</description></item><item><title>对番茄工作法的反省总结</title><link>https://kequnyang.com/okr/_%E5%AF%B9%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E5%8F%8D%E7%9C%81%E6%80%BB%E7%BB%93/</link><pubDate>Fri, 09 Jul 2021 12:09:16 +0800</pubDate><guid>https://kequnyang.com/okr/_%E5%AF%B9%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E5%8F%8D%E7%9C%81%E6%80%BB%E7%BB%93/</guid><description>2021-07 甘特图是最伟大的全局视角和控制工具 # markdown 中的 mermaid就可以支持。以后打算以这个为主导 2021-04-14 OKR如何与日程结合 # 长日留痕的启发 # 关键结果需要反复思考才能明确，这个明确过程价值很高，要求每天投入1小时思考 最近看了一本 长日留痕 , 史蒂文斯对细节的无止境地考究让我体验到强大的人做事的正确方式。我的意思是，一个工作，总需要有人做这样的思考和观察。通过这个过程，可以明了事务的关键节点有哪些。我想，OKR中的KR只有这样得到才有可靠的意义。 另外KR在做战略过程中也是适用的。要想明白一个问题，只有发现战略博弈中的平衡点，才能建构出最好的“不败”的策略。 知乎讨论 海外博士一般朝九晚五，国内博士动辄十几个小时科研时间。为什么普遍认为海外博士水平比较高 # 一个经典的回答: 有一种博士是自我驱动地朝九晚五，每天起床都迫不及待地去实验室实现自己的想法，业余时间锻炼身体保证白天精力充沛、畅快娱乐保持心态乐观，在良好的科研氛围中迸发创造力，优秀的科研成果接踵而至。 同样，我觉得保障自己工作之前已经找到那个完美的，等待实现的好主意非常重要。 综上，应该给自己列从大到小的一系列目标和一系列目标的关键结果， 把这些关键结果排到日常里面。每天不工作的时候优化这些结果和目标。工作的时候每天高效地实现一个最佳的关键结果 # 2021-07对番茄工作法的反省总结 # 采用番茄工作法快一年了。越来越难采用番茄工作法
 问题现象： # 1.起初实施的时候番茄始终内的工作状态良好。但长期越来越难以坚持。也无法保证番茄时间的质量 2.自己的工作节奏很难跟着外部强烈的番茄节奏走。 3.反复中断，中断后状态不容易回来
