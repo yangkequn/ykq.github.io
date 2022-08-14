@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Okrs on To Build, I Live</title><link>https://kequnyang.com/okr/</link><description>Recent content in Okrs on To Build, I Live</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Sun, 03 Oct 2021 17:58:16 +0800</lastBuildDate><atom:link href="https://kequnyang.com/okr/index.xml" rel="self" type="application/rss+xml"/><item><title>OKR october 2021</title><link>https://kequnyang.com/okr/2021-10/</link><pubDate>Sun, 03 Oct 2021 17:58:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-10/</guid><description>Object 1. 10月20日是Demo day 2. 为网站找到试用用户</description></item><item><title>OKR September 2021</title><link>https://kequnyang.com/okr/2021-09/</link><pubDate>Wed, 01 Sep 2021 16:09:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-09/</guid><description>Object： # 放弃：搞定交互式推荐系统 测试平台对主动学习的评估 KeyResult
+提交客户端记录 选型 初步查询引擎使用milvus text2vec模型选用 word_vector 加权平均值 但是这个方法显然无法考虑词语的先后顺序等问题。对语义内容的理解是有问题的 ELECTRA 打算后续用这个模型来改进 训练 部署 9月份大概只花了7天就完成了这个任务，剩下的时间在摸索React 和 go的后端</description></item><item><title>OKR August 2021</title><link>https://kequnyang.com/okr/2021-08/</link><pubDate>Tue, 03 Aug 2021 17:42:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-08/</guid><description>Object： 开发面向企业招聘评估市场的解决方案。 画出模拟业务流程图的反馈图
+Key Result: 为企业招聘市场开发评估工具和模板，以及对模板的处理框架</description></item><item><title>对番茄工作法的反省总结</title><link>https://kequnyang.com/okr/_%E5%AF%B9%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E5%8F%8D%E7%9C%81%E6%80%BB%E7%BB%93/</link><pubDate>Fri, 09 Jul 2021 12:09:16 +0800</pubDate><guid>https://kequnyang.com/okr/_%E5%AF%B9%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E5%8F%8D%E7%9C%81%E6%80%BB%E7%BB%93/</guid><description>2021-07 甘特图是最伟大的全局视角和控制工具 # markdown 中的 mermaid就可以支持。以后打算以这个为主导 2021-04-14 OKR如何与日程结合 # 长日留痕的启发 # 关键结果需要反复思考才能明确，这个明确过程价值很高，要求每天投入1小时思考 最近看了一本 长日留痕 , 史蒂文斯对细节的无止境地考究让我体验到强大的人做事的正确方式。我的意思是，一个工作，总需要有人做这样的思考和观察。通过这个过程，可以明了事务的关键节点有哪些。我想，OKR中的KR只有这样得到才有可靠的意义。 另外KR在做战略过程中也是适用的。要想明白一个问题，只有发现战略博弈中的平衡点，才能建构出最好的“不败”的策略。 知乎讨论 海外博士一般朝九晚五，国内博士动辄十几个小时科研时间。为什么普遍认为海外博士水平比较高 # 一个经典的回答: 有一种博士是自我驱动地朝九晚五，每天起床都迫不及待地去实验室实现自己的想法，业余时间锻炼身体保证白天精力充沛、畅快娱乐保持心态乐观，在良好的科研氛围中迸发创造力，优秀的科研成果接踵而至。 同样，我觉得保障自己工作之前已经找到那个完美的，等待实现的好主意非常重要。 综上，应该给自己列从大到小的一系列目标和一系列目标的关键结果， 把这些关键结果排到日常里面。每天不工作的时候优化这些结果和目标。工作的时候每天高效地实现一个最佳的关键结果 # 2021-07对番茄工作法的反省总结 # 采用番茄工作法快一年了。越来越难采用番茄工作法
+问题现象： # 1.起初实施的时候番茄始终内的工作状态良好。但长期越来越难以坚持。也无法保证番茄时间的质量 2.自己的工作节奏很难跟着外部强烈的番茄节奏走。 3.反复中断，中断后状态不容易回来
+主要原因看起来还是因为 # 追求流程性努力，缺乏更清晰地目标感。目标缺失，没有使命感，兴趣感，探索感，所有的工作状态就瓦解了。 解决方案：我现在主要采用心流工作法。发现效果比单纯番茄工作法远远更好。 # 追求目标清晰. 追求及时反馈，注重结果确认。 保护连续的状态。不被打扰地沉浸等。 采用番茄工作法作为启动聚焦模式的一种唤醒工具，但不受停止的约束 番茄工作法浅析</description></item><item><title>OKR July 2021</title><link>https://kequnyang.com/okr/2021-07/</link><pubDate>Thu, 01 Jul 2021 19:11:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-07/</guid><description>收缩之前所有想法，保留最核心的想法：巅峰探索 # Object : # 完善平台的功能，没有引入推荐系统的那一部分
+Key Result # 迭代完善站内功能使用 2.迭代完善站外功能使用 每天半小时反复审阅，持续收缩对平台的定义 ：7月份的工作状态相对之前很好。也许主要是因为丈母娘来帮忙，可以安心工作</description></item><item><title>OKR of May 2021</title><link>https://kequnyang.com/okr/2021-05/</link><pubDate>Tue, 22 Jun 2021 19:16:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-05/</guid><description>&lt;h2 id="object">
+Object:
+&lt;a class="anchor" href="#object">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>最小可行性产品的迭代&lt;/li>
+&lt;li>开发A/B测试模块&lt;/li>
+&lt;/ul>
+&lt;h2 id="keyreult-cardinal">
+KeyReult Cardinal:
+&lt;a class="anchor" href="#keyreult-cardinal">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="1-用户可以添加内容">
+1. 用户可以添加内容
+&lt;a class="anchor" href="#1-%e7%94%a8%e6%88%b7%e5%8f%af%e4%bb%a5%e6%b7%bb%e5%8a%a0%e5%86%85%e5%ae%b9">#&lt;/a>
+&lt;/h3>
+&lt;p>放弃，受推荐系统思路的影响，改为无话题结构数据组织&lt;/p>
+&lt;h3 id="2-用户可以更新内容">
+2. 用户可以更新内容
+&lt;a class="anchor" href="#2-%e7%94%a8%e6%88%b7%e5%8f%af%e4%bb%a5%e6%9b%b4%e6%96%b0%e5%86%85%e5%ae%b9">#&lt;/a>
+&lt;/h3>
+&lt;p>放弃，受推荐系统思路的影响，改为无话题结构数据组织&lt;/p>
+&lt;h3 id="3-用户可以同步内容的变动">
+3. 用户可以同步内容的变动
+&lt;a class="anchor" href="#3-%e7%94%a8%e6%88%b7%e5%8f%af%e4%bb%a5%e5%90%8c%e6%ad%a5%e5%86%85%e5%ae%b9%e7%9a%84%e5%8f%98%e5%8a%a8">#&lt;/a>
+&lt;/h3>
+&lt;p>放弃，受推荐系统思路的影响，改为无话题结构数据组织&lt;/p>
+&lt;h3 id="4-学习完ab测试一书">
+4. 学习完《A/B测试》一书
+&lt;a class="anchor" href="#4-%e5%ad%a6%e4%b9%a0%e5%ae%8cab%e6%b5%8b%e8%af%95%e4%b8%80%e4%b9%a6">#&lt;/a>
+&lt;/h3>
+&lt;pre>&lt;code> 完成于2021-05-16
+&lt;/code>&lt;/pre>
+&lt;h2 id="keyreult-secondary">
+KeyReult Secondary:
+&lt;a class="anchor" href="#keyreult-secondary">#&lt;/a>
+&lt;/h2>
+&lt;h4 id="5-支持文献的引用和作者的引用">
+5. 支持文献的引用和作者的引用
+&lt;a class="anchor" href="#5-%e6%94%af%e6%8c%81%e6%96%87%e7%8c%ae%e7%9a%84%e5%bc%95%e7%94%a8%e5%92%8c%e4%bd%9c%e8%80%85%e7%9a%84%e5%bc%95%e7%94%a8">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="6-所有内容自动进入ab测试">
+6. 所有内容自动进入A/B测试
+&lt;a class="anchor" href="#6-%e6%89%80%e6%9c%89%e5%86%85%e5%ae%b9%e8%87%aa%e5%8a%a8%e8%bf%9b%e5%85%a5ab%e6%b5%8b%e8%af%95">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="7-用go上手-写用户管理模块">
+7. 用go上手 写用户管理模块
+&lt;a class="anchor" href="#7-%e7%94%a8go%e4%b8%8a%e6%89%8b-%e5%86%99%e7%94%a8%e6%88%b7%e7%ae%a1%e7%90%86%e6%a8%a1%e5%9d%97">#&lt;/a>
+&lt;/h4>
+&lt;h4 id="8-阅读30篇关于ab测试的文章">
+8. 阅读30篇关于A/B测试的文章
+&lt;a class="anchor" href="#8-%e9%98%85%e8%af%bb30%e7%af%87%e5%85%b3%e4%ba%8eab%e6%b5%8b%e8%af%95%e7%9a%84%e6%96%87%e7%ab%a0">#&lt;/a>
+&lt;/h4>
+&lt;details>
+&lt;summary>阅读完成情况:&lt;/summary>
+&lt;ol>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=YJeWrniW48k" title="A/B Testing：轻松Pass二轮面试！">A/B Testing：轻松Pass二轮面试！&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>介绍了一些经典的概念&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>&lt;a href="https://36kr.com/p/1721379258369" title="如何选择正确的数据指标？">如何选择正确的数据指标？&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>一个好的北极星指标可以整合整个工作的有效运作，并且确保前景&lt;/li>
+&lt;li>日活是一个好指标&lt;/li>
+&lt;li>对UGA网站，在线费曼学习网站，每用户人均写内容条数应该是个更好的指标&lt;/li>
+&lt;li>指标 之间往往不是无关的，选择高效的的指标就可以
+&lt;img src="http://image.woshipm.com/wp-files/2018/12/Z1QV4enlTSkcJWCYhqVu.png" alt="AB测试架构" title="AB测试架构"/>&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>&lt;a href="https://zhuanlan.zhihu.com/p/79961254" title="AB 测试平台的工程实现">AB 测试平台的工程实现&lt;/a>
+核心组成模块
+&lt;img src="https://pic3.zhimg.com/80/v2-08996c8ea95a6b0f7236bb4ef2f2c26e_1440w.jpg" alt="核心组成模块" />
+&lt;/details>
+&lt;/li>
+&lt;/ol></description></item><item><title>OKR June,2021</title><link>https://kequnyang.com/okr/2021-06/</link><pubDate>Tue, 01 Jun 2021 19:00:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-06/</guid><description> OKR of April, Early # Object: # 完成学习推荐系统一书 # 最小可行性产品的迭代 # Key Result: # 学习go-zero # go-zero 文档 完成情况 切换到go-zero + postgresql 开发 # 完成
+看完《深度推荐系统》一书 # 完成1/3,余下略过
+OKR of April, Mid-term # Object: # 可以测试学习各种主题 # 创建主题列表 # 改善学习思考的体验 # 用留意到的方式，挖掘合适的用例 # Key Results: # ☑️1. 添加用户登陆模块 # 2. 可以通过搜索找到并且创建自己的讲解 # 3. 用户可以创建自己版本的讲解内容 # 4. 用户可以创建自己的课程列表 # 完成情况 # 在用oath2 还是使用自己的登陆功能，优缺点比较： 用oath2优点： 技术面上，可以避免恶意注册，避免撞库攻击，避免其它意外bug 业务面上，可以控制早期用户群体控制在更有探索性的意见领袖群体，避免糟糕内容的污染 用OATH2 缺点： 会被大公司监控业务的成长与衰弱等信息 使用自己的登陆功能优点 实现简单 使用自己的登陆功能缺点 技术面的不可控意外 结论: 先采用oath2 方案，群体大一些以后，再考虑开放站内账号注册</description></item><item><title>OKR of April</title><link>https://kequnyang.com/okr/2021-04/</link><pubDate>Wed, 31 Mar 2021 22:26:16 +0800</pubDate><guid>https://kequnyang.com/okr/2021-04/</guid><description> Object: # 学习材料的预备。学习任何的主题都有一个过得去的学习体验。
+KeyReslt: # ✅ 测试3种生成学习材料的方法 见文本自动摘要算法
+✅ 测试2种生成学习主题的方法 测试了gensim 下的文章摘要算法，并不认为传统的技术可以良好解决自动主题生成问题
+调研10种学习平台中好的策略 💔 # 用留意到的方式，挖掘两个适合现在平台的学习用例 下半月花了不少时间探索世界咖啡馆，并尝试整合这个方法最后放弃 放弃原因,主要是因为无法产生足够密度的主动认知活动，主动认知活动主要属于作者，没想好实现上如何很好地统一各种角色 每天写400字的流水思考 断续在写,非常有用，但不应该有字数要求
+Due: April 4 2021 #</description></item><item><title>OKR_March_2021 Investigate Learning System V2</title><link>https://kequnyang.com/okr/2021-03-Investigate-Learning-System-V2/</link><pubDate>Mon, 08 Mar 2021 09:13:41 +0800</pubDate><guid>https://kequnyang.com/okr/2021-03-Investigate-Learning-System-V2/</guid><description>Object : # 调研学习内容的自动生成 调研如何衡量采样出的文本的信息交叉熵，以及维持最佳意外率15.87%。 学习平台方案的完善 2个版本的手绘应用界面 上手5大nlp 工具 分析思考项目商业面 Key results: # ✖️ Read 25 papers of text generation *✖️ 3 best tool to generate text ✅ Paper on calculate cross entropy of text ✅ Learning 10 videos and 10 articles talking on learning methods. take notes, and propose 10 idea to improve current system. ✅ 4 interation on learning platform design 5大工具使用 https://blog.csdn.net/qushaming/article/details/92585334 NLTK 、OpenNLP、LTP 、Stanford、 CoreNLP、 Gensim 、spaCy 、FudanNLP、 NLPIR 完成一份盈利与前景草图 Deadline: # March 31, 2021</description></item><item><title/><link>https://kequnyang.com/okr/2022-02iox10%E6%9C%8D%E5%8A%A1%E4%BA%BA%E6%80%A7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kequnyang.com/okr/2022-02iox10%E6%9C%8D%E5%8A%A1%E4%BA%BA%E6%80%A7/</guid><description>2022-02-06 iox10 # 2083=1e5/48 热推荐 # 调试索引内
+主要关键词计算word-vector 思路对所有内容做聚类然后用最接近的关键词来分类，分类不采用固定类别
+新增tag,测试索引
+使用推荐
+像copilot一样弹出内容 182=3650/100 # 把比赛规则说清
+5人对战计划，抽取10%后，剩下的按 // proportional sequcence with 5 element ,staring with 6.0,3.0,1.285,0.551,0.236 var []float32={6.0,3.0,1.285,0.551,0.236} //add 6.0,3.0,1.285,0.551,0.236 together=6.0+3.0+1.285+0.551+0.236=11.072 确定盈利方式 调试python 打包成docker image # 66=10000/150专项业务合作 # 提供外部的语料供应 自己使用 # 16=1000/60建立群和频道开始推广 # 一个ab测试框架，能测试不同做法的好坏 # 3.65=365/100 # 自己使用
+想象空间
+添加100篇文章作为初始内容
+养成习惯 个人时间管理 创新管理 英特尔 英伟达哪个更有前途
+编辑器向vscode的electron看齐， # 1.取消底部编辑器 2.取消markdown 样式 ✅ 2022-02-13 04:18:32</description></item></channel></rss>

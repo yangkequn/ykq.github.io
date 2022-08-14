@@ -1,0 +1,48 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Milvus: # Python 下的api接口和使用：
+https://www.cxyzjd.com/article/sgyuanshi/120049574
+Go SDK接口：
+https://github.com/milvus-io/milvus-sdk-go
+几个基本用法：
+https://github.com/milvus-io/milvus-sdk-go/tree/master/examples
+2.0.0-rc7版本的docker-compose安装
+https://milvus.io/docs/install_standalone-docker.md
+Fasis和Milvus的比较： # milvus 是集成fasis的，提供了更易使用的接口,知乎
+fasis更底层，milvus使用更便利 https://medium.com/tokopedia-engineering/how-we-used-semantic-search-to-make-our-search-10x-smarter-bd9c7f601821
+如何实现推荐功能 # 如果不存在当前搜索内容，那么搜索主题相关的内容，然后按热度随机排序 如何评估主题内容相关度
+$$ \overline{max(Q_iA_j)} * max(F_iA_j) $$ 第一部分是评估主题相关性，第二部分是焦点相关性。
+2021-11-13
+用一个适合milvus 实现的办法，就是把主题矢量和话题矢量串联，作为被检索矢量。同样对于检索矢量，第一部分依然是主题矢量，第二部分是焦点矢量。
+如果是推荐相关，对焦点F做精排序
+如果是推荐尽可能差异大的内容，那么对焦点距离*流行度做二次排序，返回流行度更大，且距离更远的内容
+3.矢量的更新。
+当用户变更了子话题时，同时更新子话题和主题变量。
+问题，被检索矢量应该串联主题矢量和焦点矢量，还是应该对着两个矢量取平均值? 矢量的语义的确是线性可叠加的。可以参考wordvector 平均值法搜索是一个很强的baseline. 但是用（a+b）*(c+D)展开，混同会引入新的两项，a.焦点和被检索主题的乘积，b 被检索话题焦点和当前编辑主题的交叉项。同时削弱主题间的权重和话题间的权重。这个约束会强化结果的准确性。但是会削弱多样性。暂时使用串联。"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Milvus 笔记"><meta property="og:description" content="Milvus: # Python 下的api接口和使用：
+https://www.cxyzjd.com/article/sgyuanshi/120049574
+Go SDK接口：
+https://github.com/milvus-io/milvus-sdk-go
+几个基本用法：
+https://github.com/milvus-io/milvus-sdk-go/tree/master/examples
+2.0.0-rc7版本的docker-compose安装
+https://milvus.io/docs/install_standalone-docker.md
+Fasis和Milvus的比较： # milvus 是集成fasis的，提供了更易使用的接口,知乎
+fasis更底层，milvus使用更便利 https://medium.com/tokopedia-engineering/how-we-used-semantic-search-to-make-our-search-10x-smarter-bd9c7f601821
+如何实现推荐功能 # 如果不存在当前搜索内容，那么搜索主题相关的内容，然后按热度随机排序 如何评估主题内容相关度
+$$ \overline{max(Q_iA_j)} * max(F_iA_j) $$ 第一部分是评估主题相关性，第二部分是焦点相关性。
+2021-11-13
+用一个适合milvus 实现的办法，就是把主题矢量和话题矢量串联，作为被检索矢量。同样对于检索矢量，第一部分依然是主题矢量，第二部分是焦点矢量。
+如果是推荐相关，对焦点F做精排序
+如果是推荐尽可能差异大的内容，那么对焦点距离*流行度做二次排序，返回流行度更大，且距离更远的内容
+3.矢量的更新。
+当用户变更了子话题时，同时更新子话题和主题变量。
+问题，被检索矢量应该串联主题矢量和焦点矢量，还是应该对着两个矢量取平均值? 矢量的语义的确是线性可叠加的。可以参考wordvector 平均值法搜索是一个很强的baseline. 但是用（a+b）*(c+D)展开，混同会引入新的两项，a.焦点和被检索主题的乘积，b 被检索话题焦点和当前编辑主题的交叉项。同时削弱主题间的权重和话题间的权重。这个约束会强化结果的准确性。但是会削弱多样性。暂时使用串联。"><meta property="og:type" content="article"><meta property="og:url" content="https://kequnyang.com/learning-hub/%E6%9C%80%E8%BF%91%E9%82%BB%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%A0%94/"><meta property="article:section" content="learning hub"><meta property="article:published_time" content="2021-10-06T21:46:16+08:00"><meta property="article:modified_time" content="2021-10-06T21:46:16+08:00"><title>Milvus 笔记 | To Build, I Live</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.95d69eb6bad8b9707ff2b5d8d9e31ce70a1b84f2ed7ffaf665ffcf00aa7993bd.css integrity="sha256-ldaetrrYuXB/8rXY2eMc5wobhPLtf/r2Zf/PAKp5k70=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.417b4a041f636c91ee9dec1d6add7d2097f3b90ee67f6b3dcd0e1c245b61db52.js integrity="sha256-QXtKBB9jbJHunewdat19IJfzuQ7mf2s9zQ4cJFth21I=" crossorigin=anonymous></script>
+<script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>To Build, I Live</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/idea target=_blank rel=noopener>ideas</a></li><li><a href=/learning_website target=_blank rel=noopener>learning website</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Milvus 笔记</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#milvus>Milvus:</a></li><li><a href=#fasis和milvus的比较>Fasis和Milvus的比较：</a></li></ul></li><li><a href=#如何实现推荐功能>如何实现推荐功能</a></li></ul></nav></aside></header><article class=markdown><h2 id=milvus>Milvus:
+<a class=anchor href=#milvus>#</a></h2><p>Python 下的api接口和使用：</p><p><a href=https://www.cxyzjd.com/article/sgyuanshi/120049574>https://www.cxyzjd.com/article/sgyuanshi/120049574</a></p><p>Go SDK接口：</p><p><a href=https://github.com/milvus-io/milvus-sdk-go>https://github.com/milvus-io/milvus-sdk-go</a></p><p>几个基本用法：</p><p><a href=https://github.com/milvus-io/milvus-sdk-go/tree/master/examples>https://github.com/milvus-io/milvus-sdk-go/tree/master/examples</a></p><p>2.0.0-rc7版本的docker-compose安装</p><p><a href=https://milvus.io/docs/install_standalone-docker.md>https://milvus.io/docs/install_standalone-docker.md</a></p><h2 id=fasis和milvus的比较>Fasis和Milvus的比较：
+<a class=anchor href=#fasis%e5%92%8cmilvus%e7%9a%84%e6%af%94%e8%be%83>#</a></h2><p><a href=https://zhuanlan.zhihu.com/p/364923722>milvus 是集成fasis的，提供了更易使用的接口,知乎</a></p><p>fasis更底层，milvus使用更便利 <a href=https://medium.com/tokopedia-engineering/how-we-used-semantic-search-to-make-our-search-10x-smarter-bd9c7f601821>https://medium.com/tokopedia-engineering/how-we-used-semantic-search-to-make-our-search-10x-smarter-bd9c7f601821</a></p><h1 id=如何实现推荐功能>如何实现推荐功能
+<a class=anchor href=#%e5%a6%82%e4%bd%95%e5%ae%9e%e7%8e%b0%e6%8e%a8%e8%8d%90%e5%8a%9f%e8%83%bd>#</a></h1><ol><li>如果不存在当前搜索内容，那么搜索主题相关的内容，然后按热度随机排序</li></ol><p>如何评估主题内容相关度</p><p>$$
+\overline{max(Q_i<em>A_j)} * max(F_i</em>A_j)
+$$
+第一部分是评估主题相关性，第二部分是焦点相关性。</p><p>2021-11-13</p><ol start=2><li><p>用一个适合milvus 实现的办法，就是把主题矢量和话题矢量串联，作为被检索矢量。同样对于检索矢量，第一部分依然是主题矢量，第二部分是焦点矢量。</p><p>如果是推荐相关，对焦点F做精排序</p><p>如果是推荐尽可能差异大的内容，那么对焦点距离*流行度做二次排序，返回流行度更大，且距离更远的内容</p></li></ol><p>3.矢量的更新。</p><p>当用户变更了子话题时，同时更新子话题和主题变量。</p><ol start=4><li>问题，被检索矢量应该串联主题矢量和焦点矢量，还是应该对着两个矢量取平均值?</li></ol><p>矢量的语义的确是线性可叠加的。可以参考wordvector 平均值法搜索是一个很强的baseline. 但是用（a+b）*(c+D)展开，混同会引入新的两项，a.焦点和被检索主题的乘积，b 被检索话题焦点和当前编辑主题的交叉项。同时削弱主题间的权重和话题间的权重。这个约束会强化结果的准确性。但是会削弱多样性。暂时使用串联。</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#milvus>Milvus:</a></li><li><a href=#fasis和milvus的比较>Fasis和Milvus的比较：</a></li></ul></li><li><a href=#如何实现推荐功能>如何实现推荐功能</a></li></ul></nav></div></aside></main></body></html>
