@@ -1,13 +1,15 @@
 {{ define "main" }}
 <article class="markdown">
-  <h1>
-    <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
-  </h1>
-  {{ partial "docs/post-meta" . }}
-  {{- .Content -}}
+    <h1>
+        <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+    </h1>
+    {{ partial "docs/post-meta" . }} {{- .Content -}} {{ if .Page.Store.Get "hasMermaid" }}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true
+        });
+    </script>
+    {{ end }}
 </article>
-{{ end }}
-
-{{ define "toc" }}
-  {{ partial "docs/toc" . }}
-{{ end }}
+{{ end }} {{ define "toc" }} {{ partial "docs/toc" . }} {{ end }}
