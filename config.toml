@@ -36,8 +36,8 @@ enableGitInfo = true
   url = "/idea"
   weight = 10
 [[menu.after]]
-  name = "learning website"
-  url = "/learning_website"
+  name = "learning_hub"
+  url = "/learning_hub"
   weight = 10
 
 
