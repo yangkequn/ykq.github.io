@@ -32,12 +32,16 @@ enableGitInfo = true
 [menu]
 # [[menu.before]]
 [[menu.after]]
-  name = "ideas"
-  url = "/idea"
+  name = "ideas / 想法"
+  url = "/ideas/"
   weight = 10
 [[menu.after]]
-  name = "learning hub"
-  url = "/learning-hub"
+  name = "forcasts / 预言"
+  url = "/forcasts/"
+  weight = 10
+[[menu.after]]
+  name = "Todo this month"
+  url = "/okr/2022-08_iam26/"
   weight = 10
 
 
