@@ -41,7 +41,7 @@ enableGitInfo = true
   weight = 10
 [[menu.after]]
   name = "Todo this month"
-  url = "/okr/2022-08_iam26/"
+  url = "/okr/2022-09_iam26/"
   weight = 10
 
 
