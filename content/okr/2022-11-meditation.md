@@ -15,7 +15,7 @@ gantt
     hrv 分类预测，结合mse:done,2022-10-30,2d
     预测时的bug,数值剧烈波动:2022-11-01,1d
  
-    section KR:使用声音强化冥想
+    section KR-使用声音强化冥想
     使用声音强化冥想:2022-10-20,10d
     读取trajectory ogg文件并记录:2022-10-21,3d
 
