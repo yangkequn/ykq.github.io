@@ -1,4 +1,8 @@
 {
     "editor.tabCompletion": "on",
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "redisXplorer.config": {
+        "profiles": [],
+        "scanLimit": 200
+    }
 }

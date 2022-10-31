@@ -31,19 +31,23 @@ enableGitInfo = true
 
 [menu]
 # [[menu.before]]
-[[menu.after]]
+[[menu.before]]
   name = "ideas / 想法"
   url = "/ideas/"
   weight = 10
-[[menu.after]]
+[[menu.before]]
   name = "forcasts / 预言"
   url = "/forcasts/"
   weight = 10
-[[menu.after]]
-  name = "Todo this month"
-  url = "/okr/2022-09_iam26/"
+[[menu.before]]
+  name = "Todo This Month"
+  url = "/okr/2022-11-meditation/"
   weight = 10
-
+[[menu.before]]
+  name = "Todo Last Month"
+  url = "/okr/2022-10-meditation/"
+  weight = 10
+ 
 
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
