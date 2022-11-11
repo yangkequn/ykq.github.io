@@ -10,25 +10,24 @@ gantt
     title O:实现冥想平台
     dateFormat  YYYY-MM-DD
     excludes    sunday
-
-    section KR：修复hrv的准确性,一周
-    hrv 分类预测，结合mse:done,2022-10-30,2d
-    预测时的bug,数值剧烈波动:2022-11-01,1d
- 
-    section KR-使用声音强化冥想
-    使用声音强化冥想:2022-10-20,10d
-    读取trajectory ogg文件并记录:2022-10-21,3d
-
+    section KR 完善平台数据：
+    采集大量数据，以便训练神经网络:2022-11-08,3d
     section KR：saavuu框架的改进
-    安全性改进，避免扫描攻击：把userInfo,userAuth,改为key-value形式,并存放到单独的db当中:2022-12-15,done,1d 
+    安全性改进，避免扫描攻击：添加!支持:done,2022-12-15,1d 
+    把saavuu 部署到docker 容器当中:2022-11-11,1d
+
+    section KR-使用声音强化冥想
+    使用声音强化冥想:2022-11-20,10d
+    读取trajectory ogg文件并记录:2022-11-21,3d
+
 
     section 推广冥想软件
-    各种微信等注册账号的接入:2022-10-15,5d
-    bilibili,youtube 等视频发布:2022-10-15,15d
-    论坛反馈的预备:2022-10-15,5d
+    各种微信等注册账号的接入:2022-11-15,5d
+    bilibili,youtube 等视频发布:2022-11-15,15d
+    论坛反馈的预备:2022-11-15,5d
 
     section 定位推广群体
-    可能更适宜婴儿这样没有额外心理活动的群体: cl1,2022-10-20,10d
+    可能更适宜婴儿这样没有额外心理活动的群体: cl1,2022-11-20,10d
     
     %% 衡量运动疲劳情况，什么时候应该重新运动。https://www.whoop.com/thelocker/heart-rate-variability-hrv/
     #度量所有药品的有效性，例如亚精胺
@@ -41,15 +40,54 @@ gantt
     # 短期harv 和死亡有强关联。需要评估测量。https://www.ahajournals.org/doi/10.1161/01.cir.0000047275.25795.17
     # polar 设备也许可以直接读取HBV     https://www.polar.com/blog/heart-rate-variability-hrv/ https://www.polar.com/vantage/v2 
     # 背景音乐强化
-    背景音乐市场应该是最佳市场。    最好的背景音乐要求先是具有正念效应，也就是积极的压力，但是稍后有利于提升hrv :2022-10-20,10d
+    背景音乐市场应该是最佳市场。    最好的背景音乐要求先是具有正念效应，也就是积极的压力，但是稍后有利于提升hrv :2022-11-20,10d
     # 一个手机，可以控制前端网页上的各种操作
     # [emotion control](https://www.frontiersin.org/articles/10.3389/fnins.2019.01131/full)
 
     section 通过gitpages部署网站
-    通过gitpages 部署网站saavuu:2022-10-20,1d 
-    git actions 部署网站saavuu:2022-10-20,2d 
-    网站回撤机制:2022-10-20,3d 
-    考虑新域名策略，happyhabbi:2022-10-20,1d 
+    通过gitpages 部署网站saavuu:2022-11-20,1d 
+    git actions 部署网站saavuu:2022-11-20,2d 
+    网站回撤机制:2022-11-20,3d 
+    考虑新域名策略，happyhabbi:2022-11-20,1d 
+
+    section KR：修复hrv的准确性,剧烈波动，3天预售
+    Class_weight对没有出现的类别的权重，调整为平均权重，否则label-smoothing不能生效:done,2022-11-11,1d
+    分离heartRate、RRSpan的ConvChannel,以便训练更快，收敛更准:done,2022-11-11,1d
+    分离heartRate的State,以便heartRate更稳定:done,2022-11-11,1d
+    fix nan loss,使用label smoothing:done,2022-11-10,1d
+    推理会出现卡阻的问题,因为没使用wifi，4G信号弱:done,2022-11-10,1d
+    FireFox采用点数每秒419是否是Bug,无误:done,2022-11-08,2d
+    训练时使用训练数据的Bug,RR相对加速度的偏移不应超过一个心率:done,2022-11-08,1d
+    仔细分析训练时候的权重更迭的过程:done,2022-11-08,2d
+    RR预测会出现RR为0的Bug:done,2022-11-08,1d
+    chrome、firefox时间匹配,可靠的时间同步校准:done,2022-11-08,1d
+    后端训练，重新匹配适应毫秒级精度时间:done,2022-11-07,1d
+    前端使用毫秒级高精度计时器: done,2022-11-07,1d
+    后端训练，添加能体现class 之间线性关系的loss:  done,2022-11-07,1d
+    用分类来做hb 预测，理由是由于样本不均衡。线性预测一定是不可能准确的:  done,2022-11-04,2d
+    前端显示时毫秒调整后的时间:done,2022-11-05,2d
+    及心率的时间改为更准确的时间，避免或许有高达一秒的时间偏差。加速度使用的时候考虑校准这个时间偏差:done,2022-11-04,1d
+    训练的时候加入loss,使得不同类别被用到的几率绝对均等:done,2022-11-04,2d
+    现在使用crossEntropy的姿势是错误的。改为正确的方式: done,2022-11-03,1d
+    #仔细检查RR的loss,看为什么loss看起来不可靠: 2022-11-03,1d
+    一个高精准的数据同步方式，来同步数据信号，用心率来同步加速度信号，而不是用加速度信号来同步心率信号，放弃 :  done,2022-11-03,1d
+    #放弃：心率和RR到达的时间不稳定，前后波动几百毫秒，需要做的变动太大。
+    用多段线性回归来做RR，放弃:  done,2022-11-03,1d
+    #放弃，理论可靠性不如多类回归
+    #这是因为留意到心率heartbeat的其实实时性挺好。但是RR的波动性依旧总是上不来
+
+    现在RR的准确率几乎总是可以相当精确地反应心率，故把HR信号也用多分类方式改写，放弃，因为准确性不是问题: done,2022-11-05,1d
+    一个高精准的数据同步方式，来同步不同浏览器的信号采集，放弃: done,2022-11-02,1d
+    #放弃的原因是觉得chrome提供的精度应该够了
+    统计hrv分布，从数据看hrv无法连续的根因 : done,2022-11-02,1d
+    rr间距的类再平衡 : done,2022-11-02,1d
+
+    #猜测核心原因，1，stride不够。2.newState 计算时候层数过少.3卷积层数太少
+    #真是关键原因，没有使用lastState,导致无法使用状态信息
+    hrv 分类预测，结合mse:done,2022-10-30,2d
+    预测时的bug,数值剧烈波动+stride+6层卷积+multilayGenNewState+regressionAsHeartRate:done,2022-11-01,1d
+    Mode,消除数值剧烈波动-Improvex2=256hiddenstate+2layerGRU:done,2022-11-01,1d
+ 
     
 ```
 
