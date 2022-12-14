@@ -42,8 +42,8 @@ gantt
 
 
     section devOps改进
-    #使用portainer的cicd:2022-11-15,2d
-    上传神经网络项目到github:done,2022-12-14,5d
+    使用portainer的cicd部署saavuu:done,2022-11-15,2d
+    上传神经网络项目到github:done,2022-12-14,1d
     添加UpdateSchme以便方便地更新struct Schema:done,2022-12-14,1d
     使用dragonflyDB 和AOF,放弃，仅用keydb已经足够:done,2022-12-08,1d
     saavuu 自动配置批访问权限。前三天采用自动配置:done,2022-12-08,1d
