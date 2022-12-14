@@ -41,11 +41,11 @@ enableGitInfo = true
   weight = 10
 [[menu.before]]
   name = "Todo This Month"
-  url = "/okr/2022-11-meditation/"
+  url = "/okr/2022-12-meditation/"
   weight = 10
 [[menu.before]]
   name = "Todo Last Month"
-  url = "/okr/2022-10-meditation/"
+  url = "/okr/2022-11-meditation/"
   weight = 10
  
 

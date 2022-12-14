@@ -10,15 +10,62 @@ gantt
     title O:实现冥想平台
     dateFormat  YYYY-MM-DD
     excludes    sunday
+
+
+    section KR-使用声音强化冥想,22-11-15,21 days
+
+    golang 把评分做成服务:2022-11-28,3d
+    强化学习之training:2022-11-29,2d
+
+    前端使用多片段的背景音乐:2022-11-29,1d
+    前端可以不使用背景音乐:2022-11-29,1d
+    前端可以使用指定的背景音乐:2022-11-29,1d
+
+    指令也分成以秒为单位:done,2022-11-27,1d
+    背景音乐、指令以秒计数后重算vector:done,2022-11-28,1d
+    背景音乐ID以秒计数,（约定不管一条指令时间多长，都算一秒，一个操作步骤）:done,2022-11-27,2d
+    强化学习选择语音引导词:2022-11-20,5d
+    强化学习选择背景音乐:2022-11-20,5d
+
+
+    音乐分成以秒为单位:done,2022-11-22,3d
+    背景音乐、指令转vector:done,2022-11-25,1d
+    前端使用以秒为单位的背景音乐:done,2022-11-25,1d
+    后端记录以秒为单位的背景音乐的trajectory:done,2022-11-26,1d
+    强化学习Data之RR的trajectory:done,2022-11-22,2d
+
+    完成背景音乐,10首,要求固定为1分钟,2022-11-18 11:done,2022-11-17,1d
+    前端正常完成冥想播放:done,2022-11-21,1d
+    前端正常完成冥想指令切换:done,2022-11-21,1d
+    前端正常完成冥想汇报:done,2022-11-21,1d
+    后端可以随机指定背景音乐和指令:done,2022-11-20,1d
+    后端记录trajctory:done,2022-11-21,1d
+    完成合成语音引导词:done,2022-11-16,1d
+    完成播放冥想的逻辑:done,2022-11-17,3d
+    确定新版本的强化冥想的主要方案,背景音乐+语音引导词:done,2022-11-15,1d
+    使用声音强化冥想:2022-11-15,6d
+
+    section 计划外工作
+    使用keydb主从服务器:2022-12-25,7d
+    编译成功支持flash的keydb:done,2022-11-23,1d
+
+    #section devOps改进
+    #使用portainer的cicd:2022-11-15,2d
+    #上传神经网络项目到github:2022-11-15,5d
+    #使用dragonflyDB 和AOF:2022-11-15,5d
+
     section KR 完善平台数据：
     采集大量数据，以便训练神经网络:2022-11-08,3d
-    section KR：saavuu框架的改进
-    安全性改进，避免扫描攻击：添加!支持:done,2022-12-15,1d 
-    把saavuu 部署到docker 容器当中:2022-11-11,1d
+    分析博能读取加速度计的办法:2022-11-08,3d
+    # 2022-11-11采集lz数据时手机摔坏，淘宝送修
+    # 2022-11-12 重新用修复了训练的稳定性。对label-smoothing 的class-weight 添加一个平均权重，避免label-smoothing无效。
+    # 2022-11-12 把dataloader的threading number 从24降低到8，解决总是卡死断开的问题。
+    # 2022-11-12 把机器内存从48G增加到96G，避免swap导致训练崩溃
 
-    section KR-使用声音强化冥想
-    使用声音强化冥想:2022-11-20,10d
-    读取trajectory ogg文件并记录:2022-11-21,3d
+    section 提高RR精度
+    class_weight考虑loss的大小，再加上一层:2022-11-20,2d
+    加速度读取polarh10的加速度，以便获得非常高质量的加速度数据:2022-11-20,2d
+
 
 
     section 推广冥想软件
@@ -48,9 +95,28 @@ gantt
     通过gitpages 部署网站saavuu:2022-11-20,1d 
     git actions 部署网站saavuu:2022-11-20,2d 
     网站回撤机制:2022-11-20,3d 
-    考虑新域名策略，happyhabbi:2022-11-20,1d 
+    考虑新域名策略，happyhabbi:done,2022-11-13,1d 
+    # 2022年11月13日，全天都在琢磨名字
+    #基本选定： youthenforce,longyouth,youthforever,youthpower,youthyoung,youthate,uthen,uthate,youthor,youthur,永远年轻的人
+    #让我激动：youthate，youthor,backtoyouth,youthbacks✅,iam26,manofrl,backto18✅，18backs✅, backtoyoung
+    # youthgeek,youthkeep,youthQ,youngKQ,youthtracker,youthiam,
+    # 考虑核心词汇 longevity,refresh
+    # 考虑 youngever,youngagain,backtoyouth,backtoyoung,youngAgain,youthub
+    # 动词化 youthen,youthwise,youthfy,youthart
+    # 前缀 enyouth,enuth,enyoung
+    # avalable:uthgeek,uthkeep,uthbit,youthhabit,uthback,uthuth,uthzen,youthback,youthtrace,
+    # not avalable:youthgeek,youthbit,youthagain,backtoyouth,youthward
 
-    section KR：修复hrv的准确性,剧烈波动，3天预售
+
+    section KR：saavuu框架的改进
+    log using logx:done,2022-11-15,1d 
+    安全性改进，避免扫描攻击：添加批量操作权限配置:done,2022-11-14,2d 
+    把saavuu 部署到docker 容器当中:done,2022-11-13,2d
+    #重装了portainer
+    #学习并放弃了portainer 自带的golang镜像生成器。原因是最后注意到版本太落后，编译提示Error: Must add canonical import path to root package。:2022-11-13
+    #学习使用golang镜像来生成镜像
+
+    section KR：修复hrv的准确性,剧烈波动
     Class_weight对没有出现的类别的权重，调整为平均权重，否则label-smoothing不能生效:done,2022-11-11,1d
     分离heartRate、RRSpan的ConvChannel,以便训练更快，收敛更准:done,2022-11-11,1d
     分离heartRate的State,以便heartRate更稳定:done,2022-11-11,1d
@@ -88,7 +154,6 @@ gantt
     预测时的bug,数值剧烈波动+stride+6层卷积+multilayGenNewState+regressionAsHeartRate:done,2022-11-01,1d
     Mode,消除数值剧烈波动-Improvex2=256hiddenstate+2layerGRU:done,2022-11-01,1d
  
-    
 ```
 
 ## 博能读取数据 2021-10-20
