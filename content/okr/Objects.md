@@ -10,6 +10,8 @@ gantt
     dateFormat  YYYY-MM-DD
     excludes    sunday
 
+
+
     section KR：超长期目标
     #芯片化的加速度蓝牙一体解决方案:2025-01-01,3d
     #找到非常准确地评估实时情绪的办法

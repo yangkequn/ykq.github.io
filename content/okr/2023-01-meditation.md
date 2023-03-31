@@ -12,19 +12,32 @@ gantt
     excludes    sunday
 
 
-    section 逻辑的闭环化,长期可持续性
-    不同的意志等级（收费）:2023-01-15,10d
-    把意愿和罚金区别开，两次付账:2023-01-15,10d
-    新冠版本的冥想:2023-01-15,10d
+    section reinfy前后端重构
+    读取hrv放入后端:done,2023-02-01,1d
+    hrv的波动区间锁定:done,2023-02-01,1d
+
+    section saavuu 框架优化
+    统一pipeline读取service:done,2023-01-30,1d
+    saavuu使用pubsub来降低延迟,放弃，pubsub会重复发送数据:done,2023-01-30,1d
+    saavuu使用stream来降低延迟:done,2023-01-31,1d
+    SERVICE_BATCH_SIZE 从newService移到configuration:done,2023-02-01,1d
+    支持延迟调用:done,2023-02-04,1d
+    用pipeline改写pendingtask:done,2023-02-05,1d
+    rpc调用时，struct不用转map:done,2023-02-05,1d
 
     section 冥想体验的优化
-    能够说得清什么才是好的冥想，以及它是对应高得分的:2023-01-15,1d
-    使用对冲的思想来逼近动力均衡:2023-01-15,1d
+    现有的得分，波动区间大小，状态好坏的差别很小.重写得分定义:done,2023-01-28,2d
+    修复datagrid无法退出编辑Bug，原因是必须返回原始model:done,2023-01-28,1d
+    分数同时考虑hrv 变低和hrv的std 变低:done,2023-02-02,1d
+    当天必须先评价才能看得分,为后续训练做准备:done,2023-02-03,1d
+    
+    #添加单条指令，开始深深的呼吸:2023-01-26,4d
 
-    添加单条指令，开始深深的呼吸:2023-01-15,4d
-    调研导致坚持的游戏规则:2023-01-15,4d
-    已完成任务分割线:2023-01-15,40d
-
+    不同的意志等级（收费）,放弃:done,2023-01-15,10d
+    把意愿和罚金区别开，两次付账,放弃:done,2023-01-15,10d
+    使用对冲的思想来逼近动力均衡,放弃，采用常用的增值服务收费:done,2023-01-26,1d
+    调研导致坚持的游戏规则，采用常用的增值服务收费:done,2023-01-26,2d
+    风险与动力的关系，采用常用的增值服务收费:done,2023-01-26,2d
     修复声音卡顿的Bug:done,2023-01-26,1d
     声音卡顿的Bug-确认原始音频的质量,无问题，移动时间起始位置就可以:done,2023-01-25,2d
     终止播放后要求不继续加载音频:done,2023-01-25,1d
@@ -35,7 +48,6 @@ gantt
     #Heart rate variability (HRV) designates the continuous oscillations of uccessive RR intervals around the mean
     calculate cvRR As score:done,2023-01-16,1d
     客户端展示的hrv 值，修正为local mean :done,2023-01-16,1d
-
 
     完成阅读论文,并重写score代码,www.ncbi.nlm.nih.gov/pmc/articles/PMC6527777/pdf/fcvm-06-00062.pdf:done,2023-01-16,1d
     # what is heartful meditation:https://iyta.com.au/yoga-blog/five-steps-to-experiencing-heartfulness-meditation/

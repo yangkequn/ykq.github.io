@@ -18,6 +18,11 @@ gantt
 
     section backto18 6-7月
     三分钟HIIT强化:2022-05-01,90d
+    
+    section 饮食强化生理年龄
+
+    
+    section 睡眠的强化
 
     section 阅读
     阅读费曼学习:2022-05-01,90d
@@ -30,7 +35,8 @@ gantt
     作为质量反馈的小目标:2022-06-01,90d
     评价可持续性的小目标:2022-06-01,90d
     
-    section wifi 检查hrv
+    section wifi 检查hrv，老化指标
+    #section 使用无限wifi检测人体生理状态
     使用wifi 评估hrv:2022-08-01,30d
     #https://arxiv.org/pdf/2301.00250.pdf
 

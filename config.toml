@@ -40,6 +40,10 @@ enableGitInfo = true
   url = "/forcasts/"
   weight = 10
 [[menu.before]]
+  name = "Todo Weekly"
+  url = "/okr/Weekly/"
+  weight = 10
+[[menu.before]]
   name = "Todo 2023/01"
   url = "/okr/2023-01-meditation/"
   weight = 10
