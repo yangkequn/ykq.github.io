@@ -1,5 +1,11 @@
+---
+title: "collaborative reinforcement"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ### for one website to reinforce human behavior,  some people can use the site to collectively reinforce their behavior. if one willing to pay some money to further improve their reinforcement, how the money should be spent or shared? design a model to make reinforcement effective
-A model to effectively use money to reinforce human behavior on a website can be designed by incorporating monetary incentives and leveraging social reinforcement. Here is a suggestion for a model that combines these two factors:
+A model to effectively use money to  reinforce human behavior on a website can be designed by incorporating monetary incentives and leveraging social reinforcement. Here is a suggestion for a model that combines these two factors:
 
 Create a user account system: Users will need to create an account on the website to participate in the reinforcement program. This will help track their progress, achievements, and rewards.
 

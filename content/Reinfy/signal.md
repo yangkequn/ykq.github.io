@@ -1,3 +1,8 @@
+---
+title: "signal"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
 ### EEG ,GSR,HRV ,which provides the most emotion info? think it step by step, RSB in cn
 在EEG（脑电图）、GSR（皮肤电反应）和HRV（心率变异性）这三种生理测量方法中，没有一个绝对的优劣之分，它们各自提供了不同方面的情绪信息。以下是对这三种方法的逐步分析：
 

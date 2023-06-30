@@ -1,3 +1,9 @@
+---
+title: "device EEG Headset"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ### recommend some egg headsets to me
 There are many EEG headsets available on the market today, each with different features and price points. Here are a few popular options:
 

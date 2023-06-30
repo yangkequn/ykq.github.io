@@ -1,3 +1,9 @@
+---
+title: "importance of emotion"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ### if i wants to reinfoce human's affection on learning , is it important to measure human emotion , why, show me the reason step by step
 
 

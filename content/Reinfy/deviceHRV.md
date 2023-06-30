@@ -1,3 +1,9 @@
+---
+title: "device HRV"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ###        
 Heart rate variability (HRV) is a measure of the variation in time between consecutive heartbeats, and it can provide information about the functioning of the autonomic nervous system. While HRV may not directly measure levels of relaxation, concentration, or engagement, it can indirectly reflect changes in mental state by providing information about physiological processes that are influenced by the autonomic nervous system.
 

@@ -1,3 +1,9 @@
+---
+title: "device cameraAndHRV"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ### if i got a camera and a HRV monitor, how to measure human emotion as accurate as possible
 To measure human emotions as accurately as possible using a camera and a heart rate variability (HRV) monitor, you should follow a systematic approach that combines these tools effectively. Here's a step-by-step guide to help you:
 

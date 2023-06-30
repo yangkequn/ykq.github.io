@@ -1,3 +1,9 @@
+---
+title: "device 舒适度"
+date: 2023-03-30T15:37:00+08:00
+draft: false
+---
+
 ### is it comfortable to wear GSR ? compared with EEG, which is more unbearable? if I wants to make wearing GSR device comfortable, what should i do, RSB in chinese
 相对来说，佩戴皮肤电反应（GSR）设备通常比佩戴脑电图（EEG）头盔舒适。GSR设备通常通过手指或手腕上的传感器来测量皮肤电导率。虽然舒适度因个人差异而异，但GSR设备通常较为轻便，不会对头部造成不适。
 

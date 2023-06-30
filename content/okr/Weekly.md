@@ -1,52 +1,39 @@
 ---
 title: "weekly"
-date: 2023-01-22T10:44:00+08:00
+date: 2023-06-17T10:44:00+08:00
 draft: false
 ---
 
 
 ``` mermaid
 gantt
-    title O:实现冥想平台
+    title O:实现 learnWithAGI。本周目标： learnWithAGI可用
     dateFormat  YYYY-MM-DD
     excludes    sunday
 
 
-    section 功能的改进
-    测试冥想功能: done,2023-03-20,1d
-    尝试使用chatGPT，失败，区域国家不被允许:done,2023-03-21,1d
-    添加google 登录:done,2023-03-22,2d
-    添加充值模块,放弃，可以改用人力先顶上:done,2023-03-24,2d
-    切换域名到www.reinfy.com:2023-03-25,2d
-    section 写冥想推广文案
-    能够说得清什么才是好的冥想，以及它是对应高得分的:2023-03-24,3d
-    再下周开始Youtube 推广:2023-03-24,3d
+    section  本周目标：改进learnWithAGI，以便可用。
+    切换域名到www.learnWithAGI.com:2023-07-05,2d
+    谷歌登录后，要求绑定手机:2023-07-05,2d
 
+    section learnWithAGI 功能的改进
+    自动预先加载全部课程:done,2023-06-26,1d
+    正常创建主题的Bug:2023-06-26,1d
+    修正数字打头读取格式错误:done,2023-06-27,1d
+
+    重写构建课程目录，使其使用Path格式:done,2023-06-28,1d
+
+    #https://github.com/flyingpot/chatgpt-proxy/blob/main/api/handler.go
+    使得能顺畅使用chatgpt的api:done,2023-06-29,1d
     
-```
-
-``` mermaid
-gantt
-    title O:小红书营销定位
-    dateFormat  YYYY-MM-DD
-    excludes    sunday
-
-	1.确定主题和对应的账号
-		1.1抓取所有的主题，确定几个高价值核心主题，获得每个主题对应的关键词列表
-		1.2根据关键词列表，确立能体现这些主题中心的账号名称（chatGPT很擅长）
-
-    section 确定主题和对应的账号
-    十万篇语料库: 2023-03-25,1d
-    尝试使用chatGPT，失败，区域国家不被允许:done,2023-03-21,1d
-    添加google 登录:done,2023-03-22,2d
-    添加充值模块,放弃，可以改用人力先顶上:done,2023-03-24,2d
-    切换域名到www.reinfy.com:2023-03-25,2d
-    section 写冥想推广文案
-    能够说得清什么才是好的冥想，以及它是对应高得分的:2023-03-24,3d
-    再下周开始Youtube 推广:2023-03-24,3d
-
+    顺畅创建课程，首页bug:done,2023-06-30,1d
+    解决转为主题矢量:done,2023-06-30,1d
     
+    添加通用问题提问:2023-06-30,7d
+    
+
+
+
 ```
 
 
-# 视频打卡的威力远大于测量
